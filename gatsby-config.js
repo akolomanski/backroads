@@ -5,5 +5,24 @@
  */
 
 module.exports = {
-	plugins: [ `gatsby-plugin-sass`, `gatsby-plugin-styled-components` ]
+	siteMetadata: {
+		title: 'BackRoads',
+		description:
+			'Explore awesome worldwide tours & discover what makes each of them ucique. Forget your daily routine & say yest to adventure',
+		author: 'Andrzej Kołomański'
+	},
+	plugins: [
+		`gatsby-plugin-sass`,
+		`gatsby-plugin-styled-components`,
+		{
+			resolve: `gatsby-source-filesystem`,
+			options: {
+				name: `images`,
+				path: `${__dirname}/src/images/`
+			}
+		},
+		`gatsby-transformer-sharp`,
+		`gatsby-plugin-sharp`,
+		`gatsby-plugin-transition-link`
+	]
 };
