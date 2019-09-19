@@ -48,7 +48,7 @@ const Template = ({
 					<p className={styles.desc}>{description}</p>
 					<h2>daily schedule</h2>
 					<div className={styles.journey}>
-						{journey.map((index, item) => {
+						{journey.map((item, index) => {
 							return <Day key={index} day={item.day} info={item.info} />;
 						})}
 					</div>

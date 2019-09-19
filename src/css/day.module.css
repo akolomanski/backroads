@@ -20,6 +20,16 @@
   line-height: 2;
   transition: var(--mainTransition);
 }
+
+.info{
+  transition: var(--mainTransition);
+  max-height: 0;
+  overflow: hidden;
+}
+.show-info{
+  max-height: 200px;
+}
+
 @media screen and (min-width: 992px) {
   .day h4 {
     width: 400px;
