@@ -5,9 +5,11 @@ import AniLink from 'gatsby-plugin-transition-link/AniLink';
 import styles from '../css/blog.module.css';
 import BlogCard from '../components/Blog/BlogCard';
 import Title from '../components/Title';
+import SEO from '../components/SEO';
+
 
 const blogListTemplate = (props) => {
-	const { data: { posts: { edges } }, pageContext: { currPage, numPages } } = props;
+	const { data: { posts: { edges } }, pageContext: { currPage, numPages }} = props;
 
 	const isFirst = currPage === 1;
 	const isLast = currPage === numPages;
@@ -17,6 +19,7 @@ const blogListTemplate = (props) => {
 
 	return (
 		<Layout>
+			<SEO title="Blogs" description="description" />
 			<section className={styles.blog}>
 				<Title title="latest" subtitle="posts" />
 				<div className={styles.center}>
@@ -70,7 +73,7 @@ export const query = graphql`
 					}
 				}
 			}
-		}
+        }
 	}
 `;
 

@@ -3,11 +3,13 @@ import Layout from '../components/Layout';
 import StyledHero from '../components/StyledHero';
 import { graphql } from 'gatsby';
 import BlogList from '../components/Blog/BlogList';
+import SEO from '../components/SEO';
 
-const blog = ({ data }) => {
+const blog = ({ data:{blogBcg} }) => {
 	return (
 		<Layout>
-			<StyledHero img={data.blogBcg.childImageSharp.fluid} />
+			<SEO title="Blog" description="description" />
+			<StyledHero img={blogBcg.childImageSharp.fluid} />
 			<BlogList />
 		</Layout>
 	);

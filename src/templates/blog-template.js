@@ -4,6 +4,7 @@ import Layout from '../components/Layout';
 import styles from '../css/single-blog.module.css';
 import AniLink from 'gatsby-plugin-transition-link/AniLink';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
+import SEO from '../components/SEO';
 
 const blogTemplate = ({ data: { post: { title, published, text: { json } } } }) => {
 	const options = {
@@ -32,6 +33,7 @@ const blogTemplate = ({ data: { post: { title, published, text: { json } } } }) 
 
 	return (
 		<Layout>
+			<SEO title={title} description="description" />
 			<section className={styles.blog}>
 				<div className={styles.center}>
 					<h1>{title}</h1>
