@@ -13,7 +13,7 @@ module.exports = {
 		description:
 			'Explore awesome worldwide tours & discover what makes each of them ucique. Forget your daily routine & say yest to adventure',
 		author: 'Andrzej Kołomański',
-		twitterUsername:"@john_doe",
+		twitterUsername:"@jedrasek666",
 		image:'/static/defaultBcg.jpeg',
 		siteUrl:'https://test-gatsby-project.netlify.com'
 	},
