@@ -12,7 +12,10 @@ module.exports = {
 		title: 'BackRoads',
 		description:
 			'Explore awesome worldwide tours & discover what makes each of them ucique. Forget your daily routine & say yest to adventure',
-		author: 'Andrzej Kołomański'
+		author: 'Andrzej Kołomański',
+		twitterUsername:"@john_doe",
+		image:'/static/defaultBcg.jpeg',
+		siteUrl:'https://test-gatsby-project.netlify.com'
 	},
 	plugins: [
 		`gatsby-plugin-sass`,
@@ -35,6 +38,7 @@ module.exports = {
 		`gatsby-transformer-sharp`,
 		`gatsby-plugin-sharp`,
 		`gatsby-plugin-transition-link`,
-		`gatsby-plugin-playground`
+		`gatsby-plugin-playground`,
+		`gatsby-plugin-react-helmet`
 	]
 };
